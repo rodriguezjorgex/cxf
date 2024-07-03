@@ -35,22 +35,22 @@
         <cxf.surefire.format>brief</cxf.surefire.format>
         <cxf.surefire.usefile>false</cxf.surefire.usefile>
         <org.apache.cxf.transport.websocket.atmosphere.disabled>false</org.apache.cxf.transport.websocket.atmosphere.disabled>
-        <cxf.surefire.parallel.mode />
+        <cxf.surefire.parallel.mode/>
         <cxf.surefire.fork.vmargs>-ea</cxf.surefire.fork.vmargs>
         <cxf.server.launcher.vmargs>-ea</cxf.server.launcher.vmargs>
         <cxf.surefire.enable.assertions>true</cxf.surefire.enable.assertions>
         <cxf.surefire.rerun.count>3</cxf.surefire.rerun.count>
-        <cxf.checkstyle.extension />
+        <cxf.checkstyle.extension/>
         <cxf.compile.flags>-Xlint:unchecked,deprecation,fallthrough,finally</cxf.compile.flags>
         <cxf.compile.show.deprecation>true</cxf.compile.show.deprecation>
         <cxf.codegenplugin.forkmode>once</cxf.codegenplugin.forkmode>
         <cxf.codegen.jvmArgs>-Djakarta.xml.accessExternalSchema=file</cxf.codegen.jvmArgs>
         <cxf.downloadSources>true</cxf.downloadSources>
-        <cxf.jaxb.context.class />
-        <cxf.pmd.eclipse.ruleset.ext />
-        <cxf.resources.base.path />
+        <cxf.jaxb.context.class/>
+        <cxf.pmd.eclipse.ruleset.ext/>
+        <cxf.resources.base.path/>
         <cxf.spring.validation.mode>VALIDATION_AUTO</cxf.spring.validation.mode>
-        <cxf.xjc.jvmArgs />
+        <cxf.xjc.jvmArgs/>
         <cxf.xjcplugin.forkmode>false</cxf.xjcplugin.forkmode>
         <cxf.eclipse.outputDirectory>${basedir}/target/classes</cxf.eclipse.outputDirectory>
         <!-- stuff related to ASM -->
@@ -59,12 +59,12 @@
         <cxf.asm.version>9.7</cxf.asm.version>
 
         <!-- OSGi related properties -->
-        <cxf.fragment.host />
+        <cxf.fragment.host/>
         <cxf.bundle.activation.policy>lazy</cxf.bundle.activation.policy>
-        <cxf.bundle.activator />
-        <cxf.osgi.import />
+        <cxf.bundle.activator/>
+        <cxf.osgi.import/>
         <cxf.osgi.symbolic.name>${project.groupId}.${project.artifactId}</cxf.osgi.symbolic.name>
-        <cxf.osgi.dynamic.import />
+        <cxf.osgi.dynamic.import/>
         <cxf.osgi.asm.version>[9.5,10)</cxf.osgi.asm.version>
         <cxf.osgi.spring.version>[6,7)</cxf.osgi.spring.version>
         <cxf.osgi.slf4j.version>[2,3)</cxf.osgi.slf4j.version>
@@ -189,7 +189,7 @@
         <cxf.netty.version.range>[4,5)</cxf.netty.version.range>
         <cxf.netty.version>4.1.111.Final</cxf.netty.version>
         <cxf.netty.tcnative.version>2.0.46.Final</cxf.netty.tcnative.version>
-        <cxf.olingo.version>2.0.12</cxf.olingo.version>
+        <cxf.olingo.version>2.0.13</cxf.olingo.version>
         <cxf.openjpa.version>3.2.2</cxf.openjpa.version>
         <cxf.opentelemetry.version>1.39.0</cxf.opentelemetry.version>
         <cxf.opentelemetry.semconv.version>1.25.0-alpha</cxf.opentelemetry.semconv.version>
@@ -485,7 +485,7 @@
                         <argLine>${cxf.surefire.fork.vmargs} -D${cxf.jaxb.context.class.property}=${cxf.jaxb.context.class}</argLine>
                         <enableAssertions>${cxf.surefire.enable.assertions}</enableAssertions>
                         <parallel>${cxf.surefire.parallel.mode}</parallel>
-                        <forkNode implementation="org.apache.maven.plugin.surefire.extensions.SurefireForkNodeFactory" />
+                        <forkNode implementation="org.apache.maven.plugin.surefire.extensions.SurefireForkNodeFactory"/>
                         <rerunFailingTestsCount>${cxf.surefire.rerun.count}</rerunFailingTestsCount>
                         <systemPropertyVariables>
                             <java.io.tmpdir>${basedir}/target</java.io.tmpdir>
@@ -540,7 +540,7 @@
                                         </goals>
                                     </pluginExecutionFilter>
                                     <action>
-                                        <ignore />
+                                        <ignore/>
                                     </action>
                                 </pluginExecution>
                                 <pluginExecution>
@@ -553,7 +553,7 @@
                                         </goals>
                                     </pluginExecutionFilter>
                                     <action>
-                                        <ignore />
+                                        <ignore/>
                                     </action>
                                 </pluginExecution>
                                 <pluginExecution>
@@ -567,7 +567,7 @@
                                         </goals>
                                     </pluginExecutionFilter>
                                     <action>
-                                        <ignore />
+                                        <ignore/>
                                     </action>
                                 </pluginExecution>
                             </pluginExecutions>
@@ -2136,13 +2136,13 @@
                                 <configuration>
                                     <exportAntProperties>true</exportAntProperties>
                                     <target>
-                                        <path id="ecp.ws.path" location="${eclipse.workspace.dir}" />
-                                        <property name="full.eclipse.workspace" refid="ecp.ws.path" />
+                                        <path id="ecp.ws.path" location="${eclipse.workspace.dir}"/>
+                                        <property name="full.eclipse.workspace" refid="ecp.ws.path"/>
                                         <condition property="PMD_BUILDER" value="net.sourceforge.pmd.eclipse.plugin.pmdBuilder" else="ch.acanda.eclipse.pmd.builder.PMDBuilder">
-                                            <available file="${full.eclipse.workspace}/.metadata/.plugins/org.eclipse.core.runtime/.settings/net.sourceforge.pmd.eclipse.plugin.prefs" type="file" />
+                                            <available file="${full.eclipse.workspace}/.metadata/.plugins/org.eclipse.core.runtime/.settings/net.sourceforge.pmd.eclipse.plugin.prefs" type="file"/>
                                         </condition>
                                         <condition property="PMD_NATURE" value="net.sourceforge.pmd.eclipse.plugin.pmdNature" else="ch.acanda.eclipse.pmd.builder.PMDNature">
-                                            <available file="${full.eclipse.workspace}/.metadata/.plugins/org.eclipse.core.runtime/.settings/net.sourceforge.pmd.eclipse.plugin.prefs" type="file" />
+                                            <available file="${full.eclipse.workspace}/.metadata/.plugins/org.eclipse.core.runtime/.settings/net.sourceforge.pmd.eclipse.plugin.prefs" type="file"/>
                                         </condition>
                                     </target>
                                 </configuration>
